@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>Weather</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script charset="utf-8" src="https://api-maps.yandex.ru/1.1/index.xml" type="text/javascript"></script>
+</head>
+<body>
+<div class="header">
+    <div class="block_search_title">
+        <h2>Текущая погода</h2>
+    </div>
+    <div class="block_search">
+        <form name="city">
+            <label>
+                <input id="city_search" name="city_search" onclick="show()" placeholder="Введите название города"
+                       type="text">
+            </label>
+            <img alt="" onclick="SearchWeather()" src="img/search.svg">
+        </form>
+    </div>
+</div>
+<div class="container">
+    <div id="show" style="display: none">
+        <p>Город не найден! <br> Попробуйте изменить название города</p>
+    </div>
+</div>
+<div id="hidden">
+    <div class="container">
+        <div class="block_top">
+            <div class="city">
+                <p id="city_name"></p>
+                <p id="city_date_new"></p>
+            </div>
+            <div class="city_temp">
+                <div class="description">
+                    <p id="weather_description0"></p>
+                    <img alt="" id="weather_icon0" src="" width="200">
+                </div>
+                <div class="temp_now">
+                    <h1 id="temp_now0"></h1>
+                </div>
+                <div class="temp_minmax">
+                    <p id="temp_min">Минимальная температура: </p>
+                    <p id="temp_max">Максимальная температура: </p>
+                    <p>Скорость ветра: <span id="wind_speed0"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block_bottom">
+            <div class="city">
+                <p>Погода по часам</p>
+            </div>
+            <table>
+                <tr>
+                    <th class="table_left" id="day"></th>
+                    <th id="city_date0"></th>
+                    <th id="city_date1"></th>
+                    <th id="city_date2"></th>
+                    <th id="city_date3"></th>
+                    <th id="city_date4"></th>
+                    <th id="city_date5"></th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><img alt="" id="weather_icon1" src="" width="100"></td>
+                    <td><img alt="" id="weather_icon2" src="" width="100"></td>
+                    <td><img alt="" id="weather_icon3" src="" width="100"></td>
+                    <td><img alt="" id="weather_icon4" src="" width="100"></td>
+                    <td><img alt="" id="weather_icon5" src="" width="100"></td>
+                    <td><img alt="" id="weather_icon6" src="" width="100"></td>
+                </tr>
+                <tr>
+                    <td class="table_left">Прогноз</td>
+                    <td id="weather_description1"></td>
+                    <td id="weather_description2"></td>
+                    <td id="weather_description3"></td>
+                    <td id="weather_description4"></td>
+                    <td id="weather_description5"></td>
+                    <td id="weather_description6"></td>
+                </tr>
+                <tr>
+                    <td class="table_left">Температура (&#176;C)</td>
+                    <td id="temp_now1"></td>
+                    <td id="temp_now2"></td>
+                    <td id="temp_now3"></td>
+                    <td id="temp_now4"></td>
+                    <td id="temp_now5"></td>
+                    <td id="temp_now6"></td>
+                </tr>
+                <tr>
+                    <td class="table_left">Ветер (м/с)</td>
+                    <td id="wind_speed1"></td>
+                    <td id="wind_speed2"></td>
+                    <td id="wind_speed3"></td>
+                    <td id="wind_speed4"></td>
+                    <td id="wind_speed5"></td>
+                    <td id="wind_speed6"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script rel="script" src="js/script.js" type="text/javascript"></script>
+</body>
+</html>
